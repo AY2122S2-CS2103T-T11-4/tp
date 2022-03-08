@@ -9,13 +9,13 @@ import java.util.stream.Collectors;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import peoplesoft.model.tag.Tag;
 import peoplesoft.commons.exceptions.IllegalValueException;
 import peoplesoft.model.person.Address;
 import peoplesoft.model.person.Email;
 import peoplesoft.model.person.Name;
 import peoplesoft.model.person.Person;
 import peoplesoft.model.person.Phone;
+import peoplesoft.model.tag.Tag;
 
 /**
  * Jackson-friendly version of {@link Person}.

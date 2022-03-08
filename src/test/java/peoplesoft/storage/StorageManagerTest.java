@@ -9,11 +9,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
+import peoplesoft.commons.core.GuiSettings;
 import peoplesoft.model.AddressBook;
 import peoplesoft.model.ReadOnlyAddressBook;
 import peoplesoft.model.UserPrefs;
 import peoplesoft.testutil.TypicalPersons;
-import peoplesoft.commons.core.GuiSettings;
 
 public class StorageManagerTest {
 

@@ -2,7 +2,6 @@ package peoplesoft.logic.parser;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static peoplesoft.testutil.Assert.assertThrows;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -13,13 +12,13 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import peoplesoft.logic.parser.exceptions.ParseException;
-import peoplesoft.model.tag.Tag;
-import peoplesoft.testutil.Assert;
-import peoplesoft.testutil.TypicalIndexes;
 import peoplesoft.model.person.Address;
 import peoplesoft.model.person.Email;
 import peoplesoft.model.person.Name;
 import peoplesoft.model.person.Phone;
+import peoplesoft.model.tag.Tag;
+import peoplesoft.testutil.Assert;
+import peoplesoft.testutil.TypicalIndexes;
 
 public class ParserUtilTest {
     private static final String INVALID_NAME = "R@chel";

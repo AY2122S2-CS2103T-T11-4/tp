@@ -3,7 +3,6 @@ package peoplesoft.model;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static peoplesoft.testutil.Assert.assertThrows;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -11,11 +10,11 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 
+import peoplesoft.commons.core.GuiSettings;
+import peoplesoft.model.person.NameContainsKeywordsPredicate;
 import peoplesoft.testutil.AddressBookBuilder;
 import peoplesoft.testutil.Assert;
 import peoplesoft.testutil.TypicalPersons;
-import peoplesoft.commons.core.GuiSettings;
-import peoplesoft.model.person.NameContainsKeywordsPredicate;
 
 public class ModelManagerTest {
 
@@ -94,7 +93,8 @@ public class ModelManagerTest {
 
     @Test
     public void equals() {
-        AddressBook addressBook = new AddressBookBuilder().withPerson(TypicalPersons.ALICE).withPerson(TypicalPersons.BENSON).build();
+        AddressBook addressBook = new AddressBookBuilder().withPerson(
+                TypicalPersons.ALICE).withPerson(TypicalPersons.BENSON).build();
         AddressBook differentAddressBook = new AddressBook();
         UserPrefs userPrefs = new UserPrefs();
 

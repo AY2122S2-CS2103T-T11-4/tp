@@ -3,13 +3,13 @@ package peoplesoft.testutil;
 import java.util.HashSet;
 import java.util.Set;
 
-import peoplesoft.model.tag.Tag;
-import peoplesoft.model.util.SampleDataUtil;
 import peoplesoft.model.person.Address;
 import peoplesoft.model.person.Email;
 import peoplesoft.model.person.Name;
 import peoplesoft.model.person.Person;
 import peoplesoft.model.person.Phone;
+import peoplesoft.model.tag.Tag;
+import peoplesoft.model.util.SampleDataUtil;
 
 /**
  * A utility class to help with building Person objects.

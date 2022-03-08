@@ -9,9 +9,9 @@ import org.junit.jupiter.api.Test;
 import peoplesoft.model.Model;
 import peoplesoft.model.ModelManager;
 import peoplesoft.model.UserPrefs;
+import peoplesoft.model.person.Person;
 import peoplesoft.testutil.PersonBuilder;
 import peoplesoft.testutil.TypicalPersons;
-import peoplesoft.model.person.Person;
 
 /**
  * Contains integration tests (interaction with the Model) for {@code AddCommand}.

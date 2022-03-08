@@ -2,7 +2,6 @@ package peoplesoft.storage;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static peoplesoft.storage.JsonAdaptedPerson.MISSING_FIELD_MESSAGE_FORMAT;
-import static peoplesoft.testutil.Assert.assertThrows;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,13 +9,13 @@ import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.Test;
 
-import peoplesoft.testutil.Assert;
-import peoplesoft.testutil.TypicalPersons;
 import peoplesoft.commons.exceptions.IllegalValueException;
 import peoplesoft.model.person.Address;
 import peoplesoft.model.person.Email;
 import peoplesoft.model.person.Name;
 import peoplesoft.model.person.Phone;
+import peoplesoft.testutil.Assert;
+import peoplesoft.testutil.TypicalPersons;
 
 public class JsonAdaptedPersonTest {
     private static final String INVALID_NAME = "R@chel";

@@ -1,7 +1,5 @@
 package peoplesoft.model.tag;
 
-import static peoplesoft.testutil.Assert.assertThrows;
-
 import org.junit.jupiter.api.Test;
 
 import peoplesoft.testutil.Assert;

@@ -7,6 +7,12 @@ import java.util.logging.Logger;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
+import peoplesoft.commons.core.Config;
+import peoplesoft.commons.core.LogsCenter;
+import peoplesoft.commons.core.Version;
+import peoplesoft.commons.exceptions.DataConversionException;
+import peoplesoft.commons.util.ConfigUtil;
+import peoplesoft.commons.util.StringUtil;
 import peoplesoft.logic.Logic;
 import peoplesoft.logic.LogicManager;
 import peoplesoft.model.AddressBook;
@@ -16,20 +22,14 @@ import peoplesoft.model.ReadOnlyAddressBook;
 import peoplesoft.model.ReadOnlyUserPrefs;
 import peoplesoft.model.UserPrefs;
 import peoplesoft.model.util.SampleDataUtil;
-import peoplesoft.ui.Ui;
-import peoplesoft.ui.UiManager;
-import peoplesoft.commons.core.Config;
-import peoplesoft.commons.core.LogsCenter;
-import peoplesoft.commons.core.Version;
-import peoplesoft.commons.exceptions.DataConversionException;
-import peoplesoft.commons.util.ConfigUtil;
-import peoplesoft.commons.util.StringUtil;
 import peoplesoft.storage.AddressBookStorage;
 import peoplesoft.storage.JsonAddressBookStorage;
 import peoplesoft.storage.JsonUserPrefsStorage;
 import peoplesoft.storage.Storage;
 import peoplesoft.storage.StorageManager;
 import peoplesoft.storage.UserPrefsStorage;
+import peoplesoft.ui.Ui;
+import peoplesoft.ui.UiManager;
 
 /**
  * Runs the application.

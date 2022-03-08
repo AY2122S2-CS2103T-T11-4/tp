@@ -2,21 +2,20 @@ package peoplesoft.logic.commands;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static peoplesoft.logic.commands.CommandTestUtil.assertCommandSuccess;
 
 import org.junit.jupiter.api.Test;
 
+import peoplesoft.commons.core.Messages;
+import peoplesoft.commons.core.index.Index;
 import peoplesoft.model.AddressBook;
 import peoplesoft.model.Model;
 import peoplesoft.model.ModelManager;
 import peoplesoft.model.UserPrefs;
+import peoplesoft.model.person.Person;
 import peoplesoft.testutil.EditPersonDescriptorBuilder;
 import peoplesoft.testutil.PersonBuilder;
 import peoplesoft.testutil.TypicalIndexes;
 import peoplesoft.testutil.TypicalPersons;
-import peoplesoft.commons.core.Messages;
-import peoplesoft.commons.core.index.Index;
-import peoplesoft.model.person.Person;
 
 /**
  * Contains integration tests (interaction with the Model) and unit tests for EditCommand.
@@ -45,10 +44,12 @@ public class EditCommandTest {
         Person lastPerson = model.getFilteredPersonList().get(indexLastPerson.getZeroBased());
 
         PersonBuilder personInList = new PersonBuilder(lastPerson);
-        Person editedPerson = personInList.withName(CommandTestUtil.VALID_NAME_BOB).withPhone(CommandTestUtil.VALID_PHONE_BOB)
+        Person editedPerson = personInList.withName(CommandTestUtil.VALID_NAME_BOB)
+                .withPhone(CommandTestUtil.VALID_PHONE_BOB)
                 .withTags(CommandTestUtil.VALID_TAG_HUSBAND).build();
 
-        EditCommand.EditPersonDescriptor descriptor = new EditPersonDescriptorBuilder().withName(CommandTestUtil.VALID_NAME_BOB)
+        EditCommand.EditPersonDescriptor descriptor = new EditPersonDescriptorBuilder().withName(
+                CommandTestUtil.VALID_NAME_BOB)
                 .withPhone(CommandTestUtil.VALID_PHONE_BOB).withTags(CommandTestUtil.VALID_TAG_HUSBAND).build();
         EditCommand editCommand = new EditCommand(indexLastPerson, descriptor);
 
@@ -62,7 +63,8 @@ public class EditCommandTest {
 
     @Test
     public void execute_noFieldSpecifiedUnfilteredList_success() {
-        EditCommand editCommand = new EditCommand(TypicalIndexes.INDEX_FIRST_PERSON, new EditCommand.EditPersonDescriptor());
+        EditCommand editCommand = new EditCommand(
+                TypicalIndexes.INDEX_FIRST_PERSON, new EditCommand.EditPersonDescriptor());
         Person editedPerson = model.getFilteredPersonList().get(TypicalIndexes.INDEX_FIRST_PERSON.getZeroBased());
 
         String expectedMessage = String.format(EditCommand.MESSAGE_EDIT_PERSON_SUCCESS, editedPerson);
@@ -76,8 +78,10 @@ public class EditCommandTest {
     public void execute_filteredList_success() {
         CommandTestUtil.showPersonAtIndex(model, TypicalIndexes.INDEX_FIRST_PERSON);
 
-        Person personInFilteredList = model.getFilteredPersonList().get(TypicalIndexes.INDEX_FIRST_PERSON.getZeroBased());
-        Person editedPerson = new PersonBuilder(personInFilteredList).withName(CommandTestUtil.VALID_NAME_BOB).build();
+        Person personInFilteredList = model.getFilteredPersonList().get(
+                TypicalIndexes.INDEX_FIRST_PERSON.getZeroBased());
+        Person editedPerson = new PersonBuilder(
+                personInFilteredList).withName(CommandTestUtil.VALID_NAME_BOB).build();
         EditCommand editCommand = new EditCommand(TypicalIndexes.INDEX_FIRST_PERSON,
                 new EditPersonDescriptorBuilder().withName(CommandTestUtil.VALID_NAME_BOB).build());
 
@@ -103,7 +107,8 @@ public class EditCommandTest {
         CommandTestUtil.showPersonAtIndex(model, TypicalIndexes.INDEX_FIRST_PERSON);
 
         // edit person in filtered list into a duplicate in address book
-        Person personInList = model.getAddressBook().getPersonList().get(TypicalIndexes.INDEX_SECOND_PERSON.getZeroBased());
+        Person personInList = model.getAddressBook().getPersonList().get(
+                TypicalIndexes.INDEX_SECOND_PERSON.getZeroBased());
         EditCommand editCommand = new EditCommand(TypicalIndexes.INDEX_FIRST_PERSON,
                 new EditPersonDescriptorBuilder(personInList).build());
 
@@ -113,7 +118,8 @@ public class EditCommandTest {
     @Test
     public void execute_invalidPersonIndexUnfilteredList_failure() {
         Index outOfBoundIndex = Index.fromOneBased(model.getFilteredPersonList().size() + 1);
-        EditCommand.EditPersonDescriptor descriptor = new EditPersonDescriptorBuilder().withName(CommandTestUtil.VALID_NAME_BOB).build();
+        EditCommand.EditPersonDescriptor descriptor = new EditPersonDescriptorBuilder().withName(
+                CommandTestUtil.VALID_NAME_BOB).build();
         EditCommand editCommand = new EditCommand(outOfBoundIndex, descriptor);
 
         CommandTestUtil.assertCommandFailure(editCommand, model, Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);
@@ -138,11 +144,14 @@ public class EditCommandTest {
 
     @Test
     public void equals() {
-        final EditCommand standardCommand = new EditCommand(TypicalIndexes.INDEX_FIRST_PERSON, CommandTestUtil.DESC_AMY);
+        final EditCommand standardCommand = new EditCommand(
+                TypicalIndexes.INDEX_FIRST_PERSON, CommandTestUtil.DESC_AMY);
 
         // same values -> returns true
-        EditCommand.EditPersonDescriptor copyDescriptor = new EditCommand.EditPersonDescriptor(CommandTestUtil.DESC_AMY);
-        EditCommand commandWithSameValues = new EditCommand(TypicalIndexes.INDEX_FIRST_PERSON, copyDescriptor);
+        EditCommand.EditPersonDescriptor copyDescriptor = new EditCommand.EditPersonDescriptor(
+                CommandTestUtil.DESC_AMY);
+        EditCommand commandWithSameValues = new EditCommand(
+                TypicalIndexes.INDEX_FIRST_PERSON, copyDescriptor);
         assertTrue(standardCommand.equals(commandWithSameValues));
 
         // same object -> returns true
@@ -155,10 +164,12 @@ public class EditCommandTest {
         assertFalse(standardCommand.equals(new ClearCommand()));
 
         // different index -> returns false
-        assertFalse(standardCommand.equals(new EditCommand(TypicalIndexes.INDEX_SECOND_PERSON, CommandTestUtil.DESC_AMY)));
+        assertFalse(standardCommand.equals(
+                new EditCommand(TypicalIndexes.INDEX_SECOND_PERSON, CommandTestUtil.DESC_AMY)));
 
         // different descriptor -> returns false
-        assertFalse(standardCommand.equals(new EditCommand(TypicalIndexes.INDEX_FIRST_PERSON, CommandTestUtil.DESC_BOB)));
+        assertFalse(standardCommand.equals(
+                new EditCommand(TypicalIndexes.INDEX_FIRST_PERSON, CommandTestUtil.DESC_BOB)));
     }
 
 }

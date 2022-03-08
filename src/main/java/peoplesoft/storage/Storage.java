@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Optional;
 
+import peoplesoft.commons.exceptions.DataConversionException;
 import peoplesoft.model.ReadOnlyAddressBook;
 import peoplesoft.model.ReadOnlyUserPrefs;
 import peoplesoft.model.UserPrefs;
-import peoplesoft.commons.exceptions.DataConversionException;
 
 /**
  * API of the Storage component

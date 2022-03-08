@@ -13,10 +13,10 @@ import java.util.Collections;
 import java.util.Optional;
 import java.util.Set;
 
+import peoplesoft.commons.core.index.Index;
 import peoplesoft.logic.commands.EditCommand;
 import peoplesoft.logic.parser.exceptions.ParseException;
 import peoplesoft.model.tag.Tag;
-import peoplesoft.commons.core.index.Index;
 
 /**
  * Parses input arguments and creates a new EditCommand object

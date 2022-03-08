@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Optional;
 
+import peoplesoft.commons.exceptions.DataConversionException;
 import peoplesoft.model.ReadOnlyUserPrefs;
 import peoplesoft.model.UserPrefs;
-import peoplesoft.commons.exceptions.DataConversionException;
 
 /**
  * Represents a storage for {@link UserPrefs}.

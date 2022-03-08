@@ -3,7 +3,6 @@ package peoplesoft.logic;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static peoplesoft.commons.core.Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX;
 import static peoplesoft.commons.core.Messages.MESSAGE_UNKNOWN_COMMAND;
-import static peoplesoft.testutil.Assert.assertThrows;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -22,13 +21,13 @@ import peoplesoft.model.Model;
 import peoplesoft.model.ModelManager;
 import peoplesoft.model.ReadOnlyAddressBook;
 import peoplesoft.model.UserPrefs;
-import peoplesoft.testutil.Assert;
-import peoplesoft.testutil.PersonBuilder;
-import peoplesoft.testutil.TypicalPersons;
 import peoplesoft.model.person.Person;
 import peoplesoft.storage.JsonAddressBookStorage;
 import peoplesoft.storage.JsonUserPrefsStorage;
 import peoplesoft.storage.StorageManager;
+import peoplesoft.testutil.Assert;
+import peoplesoft.testutil.PersonBuilder;
+import peoplesoft.testutil.TypicalPersons;
 
 public class LogicManagerTest {
     private static final IOException DUMMY_IO_EXCEPTION = new IOException("dummy exception");
@@ -77,7 +76,8 @@ public class LogicManagerTest {
         logic = new LogicManager(model, storage);
 
         // Execute add command
-        String addCommand = AddCommand.COMMAND_WORD + CommandTestUtil.NAME_DESC_AMY + CommandTestUtil.PHONE_DESC_AMY + CommandTestUtil.EMAIL_DESC_AMY
+        String addCommand = AddCommand.COMMAND_WORD + CommandTestUtil.NAME_DESC_AMY
+                + CommandTestUtil.PHONE_DESC_AMY + CommandTestUtil.EMAIL_DESC_AMY
                 + CommandTestUtil.ADDRESS_DESC_AMY;
         Person expectedPerson = new PersonBuilder(TypicalPersons.AMY).withTags().build();
         ModelManager expectedModel = new ModelManager();

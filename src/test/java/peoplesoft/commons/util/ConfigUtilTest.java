@@ -2,7 +2,6 @@ package peoplesoft.commons.util;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static peoplesoft.testutil.Assert.assertThrows;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -13,9 +12,9 @@ import java.util.logging.Level;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import peoplesoft.testutil.Assert;
 import peoplesoft.commons.core.Config;
 import peoplesoft.commons.exceptions.DataConversionException;
+import peoplesoft.testutil.Assert;
 
 public class ConfigUtilTest {
 

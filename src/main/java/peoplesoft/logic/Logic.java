@@ -3,12 +3,12 @@ package peoplesoft.logic;
 import java.nio.file.Path;
 
 import javafx.collections.ObservableList;
+import peoplesoft.commons.core.GuiSettings;
 import peoplesoft.logic.commands.CommandResult;
 import peoplesoft.logic.commands.exceptions.CommandException;
 import peoplesoft.logic.parser.exceptions.ParseException;
 import peoplesoft.model.Model;
 import peoplesoft.model.ReadOnlyAddressBook;
-import peoplesoft.commons.core.GuiSettings;
 import peoplesoft.model.person.Person;
 
 /**

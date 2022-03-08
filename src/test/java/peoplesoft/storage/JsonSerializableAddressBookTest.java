@@ -1,18 +1,17 @@
 package peoplesoft.storage;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static peoplesoft.testutil.Assert.assertThrows;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import org.junit.jupiter.api.Test;
 
+import peoplesoft.commons.exceptions.IllegalValueException;
+import peoplesoft.commons.util.JsonUtil;
 import peoplesoft.model.AddressBook;
 import peoplesoft.testutil.Assert;
 import peoplesoft.testutil.TypicalPersons;
-import peoplesoft.commons.exceptions.IllegalValueException;
-import peoplesoft.commons.util.JsonUtil;
 
 public class JsonSerializableAddressBookTest {
 

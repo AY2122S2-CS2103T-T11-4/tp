@@ -4,7 +4,6 @@ import static java.util.Objects.requireNonNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static peoplesoft.testutil.Assert.assertThrows;
 
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -14,15 +13,15 @@ import java.util.function.Predicate;
 import org.junit.jupiter.api.Test;
 
 import javafx.collections.ObservableList;
+import peoplesoft.commons.core.GuiSettings;
 import peoplesoft.logic.commands.exceptions.CommandException;
 import peoplesoft.model.AddressBook;
 import peoplesoft.model.Model;
 import peoplesoft.model.ReadOnlyAddressBook;
 import peoplesoft.model.ReadOnlyUserPrefs;
+import peoplesoft.model.person.Person;
 import peoplesoft.testutil.Assert;
 import peoplesoft.testutil.PersonBuilder;
-import peoplesoft.commons.core.GuiSettings;
-import peoplesoft.model.person.Person;
 
 public class AddCommandTest {
 
@@ -48,7 +47,8 @@ public class AddCommandTest {
         AddCommand addCommand = new AddCommand(validPerson);
         ModelStub modelStub = new ModelStubWithPerson(validPerson);
 
-        Assert.assertThrows(CommandException.class, AddCommand.MESSAGE_DUPLICATE_PERSON, () -> addCommand.execute(modelStub));
+        Assert.assertThrows(
+            CommandException.class, AddCommand.MESSAGE_DUPLICATE_PERSON, () -> addCommand.execute(modelStub));
     }
 
     @Test

@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static peoplesoft.commons.core.Messages.MESSAGE_PERSONS_LISTED_OVERVIEW;
-import static peoplesoft.logic.commands.CommandTestUtil.assertCommandSuccess;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -14,8 +13,8 @@ import org.junit.jupiter.api.Test;
 import peoplesoft.model.Model;
 import peoplesoft.model.ModelManager;
 import peoplesoft.model.UserPrefs;
-import peoplesoft.testutil.TypicalPersons;
 import peoplesoft.model.person.NameContainsKeywordsPredicate;
+import peoplesoft.testutil.TypicalPersons;
 
 /**
  * Contains integration tests (interaction with the Model) for {@code FindCommand}.
@@ -68,7 +67,8 @@ public class FindCommandTest {
         FindCommand command = new FindCommand(predicate);
         expectedModel.updateFilteredPersonList(predicate);
         CommandTestUtil.assertCommandSuccess(command, model, expectedMessage, expectedModel);
-        assertEquals(Arrays.asList(TypicalPersons.CARL, TypicalPersons.ELLE, TypicalPersons.FIONA), model.getFilteredPersonList());
+        assertEquals(Arrays.asList(
+                TypicalPersons.CARL, TypicalPersons.ELLE, TypicalPersons.FIONA), model.getFilteredPersonList());
     }
 
     /**

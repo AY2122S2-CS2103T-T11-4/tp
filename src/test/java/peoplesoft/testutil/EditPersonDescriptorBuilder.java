@@ -5,12 +5,12 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import peoplesoft.logic.commands.EditCommand;
-import peoplesoft.model.tag.Tag;
 import peoplesoft.model.person.Address;
 import peoplesoft.model.person.Email;
 import peoplesoft.model.person.Name;
 import peoplesoft.model.person.Person;
 import peoplesoft.model.person.Phone;
+import peoplesoft.model.tag.Tag;
 
 /**
  * A utility class to help with building EditPersonDescriptor objects.

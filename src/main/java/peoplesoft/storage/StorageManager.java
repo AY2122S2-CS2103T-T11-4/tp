@@ -5,11 +5,11 @@ import java.nio.file.Path;
 import java.util.Optional;
 import java.util.logging.Logger;
 
+import peoplesoft.commons.core.LogsCenter;
+import peoplesoft.commons.exceptions.DataConversionException;
 import peoplesoft.model.ReadOnlyAddressBook;
 import peoplesoft.model.ReadOnlyUserPrefs;
 import peoplesoft.model.UserPrefs;
-import peoplesoft.commons.core.LogsCenter;
-import peoplesoft.commons.exceptions.DataConversionException;
 
 /**
  * Manages storage of AddressBook data in local storage.

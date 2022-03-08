@@ -6,14 +6,14 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-import peoplesoft.logic.parser.exceptions.ParseException;
-import peoplesoft.model.tag.Tag;
 import peoplesoft.commons.core.index.Index;
 import peoplesoft.commons.util.StringUtil;
+import peoplesoft.logic.parser.exceptions.ParseException;
 import peoplesoft.model.person.Address;
 import peoplesoft.model.person.Email;
 import peoplesoft.model.person.Name;
 import peoplesoft.model.person.Phone;
+import peoplesoft.model.tag.Tag;
 
 /**
  * Contains utility methods used for parsing strings in the various *Parser classes.

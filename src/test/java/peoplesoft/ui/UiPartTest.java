@@ -2,7 +2,6 @@ package peoplesoft.ui;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static peoplesoft.testutil.Assert.assertThrows;
 
 import java.net.URL;
 import java.nio.file.Path;
@@ -52,7 +51,7 @@ public class UiPartTest {
     }
 
     @Test
-    public void constructor_validFileWithFxRootUrl_loadsFile() {
+    public void constructor_validFileWithFxRootUrl_loadsFile() { //
         URL validFileUrl = getTestFileUrl(VALID_FILE_WITH_FX_ROOT_PATH);
         TestFxmlObject root = new TestFxmlObject();
         assertEquals(VALID_FILE_ROOT, new TestUiPart<TestFxmlObject>(validFileUrl, root).getRoot());
@@ -85,7 +84,7 @@ public class UiPartTest {
 
     /**
      * UiPart used for testing.
-     * It should only be used with invalid FXML files or the valid file located at {@link VALID_FILE_PATH}.
+     * It should only be used with invalid FXML files or the valid file located at valid file path
      */
     private static class TestUiPart<T> extends UiPart<T> {
 

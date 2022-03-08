@@ -8,14 +8,14 @@ import static peoplesoft.logic.commands.CommandTestUtil.showPersonAtIndex;
 
 import org.junit.jupiter.api.Test;
 
+import peoplesoft.commons.core.Messages;
+import peoplesoft.commons.core.index.Index;
 import peoplesoft.model.Model;
 import peoplesoft.model.ModelManager;
 import peoplesoft.model.UserPrefs;
+import peoplesoft.model.person.Person;
 import peoplesoft.testutil.TypicalIndexes;
 import peoplesoft.testutil.TypicalPersons;
-import peoplesoft.commons.core.Messages;
-import peoplesoft.commons.core.index.Index;
-import peoplesoft.model.person.Person;
 
 /**
  * Contains integration tests (interaction with the Model) and unit tests for

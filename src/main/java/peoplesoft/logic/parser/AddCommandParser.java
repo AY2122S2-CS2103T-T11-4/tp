@@ -12,12 +12,12 @@ import java.util.stream.Stream;
 
 import peoplesoft.logic.commands.AddCommand;
 import peoplesoft.logic.parser.exceptions.ParseException;
-import peoplesoft.model.tag.Tag;
 import peoplesoft.model.person.Address;
 import peoplesoft.model.person.Email;
 import peoplesoft.model.person.Name;
 import peoplesoft.model.person.Person;
 import peoplesoft.model.person.Phone;
+import peoplesoft.model.tag.Tag;
 
 /**
  * Parses input arguments and creates a new AddCommand object

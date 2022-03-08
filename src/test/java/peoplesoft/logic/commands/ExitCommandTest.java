@@ -1,7 +1,5 @@
 package peoplesoft.logic.commands;
 
-import static peoplesoft.logic.commands.CommandTestUtil.assertCommandSuccess;
-
 import org.junit.jupiter.api.Test;
 
 import peoplesoft.model.Model;

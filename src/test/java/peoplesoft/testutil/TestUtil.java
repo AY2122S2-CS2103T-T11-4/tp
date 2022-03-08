@@ -5,8 +5,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import peoplesoft.model.Model;
 import peoplesoft.commons.core.index.Index;
+import peoplesoft.model.Model;
 import peoplesoft.model.person.Person;
 
 /**
