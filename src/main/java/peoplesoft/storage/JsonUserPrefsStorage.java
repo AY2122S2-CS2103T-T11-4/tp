@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Optional;
 
-import peoplesoft.model.ReadOnlyUserPrefs;
-import peoplesoft.model.UserPrefs;
 import peoplesoft.commons.exceptions.DataConversionException;
 import peoplesoft.commons.util.JsonUtil;
+import peoplesoft.model.ReadOnlyUserPrefs;
+import peoplesoft.model.UserPrefs;
 
 /**
  * A class to access UserPrefs stored in the hard disk as a json file

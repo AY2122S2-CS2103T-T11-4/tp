@@ -1,7 +1,6 @@
 package peoplesoft.model.person;
 
 import static java.util.Objects.requireNonNull;
-import static peoplesoft.commons.util.AppUtil.checkArgument;
 
 import peoplesoft.commons.util.AppUtil;
 

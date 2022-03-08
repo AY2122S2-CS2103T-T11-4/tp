@@ -3,8 +3,8 @@ package peoplesoft.storage;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
-import peoplesoft.model.tag.Tag;
 import peoplesoft.commons.exceptions.IllegalValueException;
+import peoplesoft.model.tag.Tag;
 
 /**
  * Jackson-friendly version of {@link Tag}.

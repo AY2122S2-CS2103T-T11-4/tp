@@ -10,12 +10,12 @@ import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import peoplesoft.commons.core.GuiSettings;
+import peoplesoft.commons.core.LogsCenter;
 import peoplesoft.logic.Logic;
 import peoplesoft.logic.commands.CommandResult;
 import peoplesoft.logic.commands.exceptions.CommandException;
 import peoplesoft.logic.parser.exceptions.ParseException;
-import peoplesoft.commons.core.GuiSettings;
-import peoplesoft.commons.core.LogsCenter;
 
 /**
  * The Main Window. Provides the basic application layout containing

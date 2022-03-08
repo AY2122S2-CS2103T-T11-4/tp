@@ -4,10 +4,10 @@ import static java.util.Objects.requireNonNull;
 
 import java.util.List;
 
-import peoplesoft.logic.commands.exceptions.CommandException;
-import peoplesoft.model.Model;
 import peoplesoft.commons.core.Messages;
 import peoplesoft.commons.core.index.Index;
+import peoplesoft.logic.commands.exceptions.CommandException;
+import peoplesoft.model.Model;
 import peoplesoft.model.person.Person;
 
 /**

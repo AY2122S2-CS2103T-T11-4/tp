@@ -7,10 +7,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import peoplesoft.logic.Logic;
 import peoplesoft.MainApp;
 import peoplesoft.commons.core.LogsCenter;
 import peoplesoft.commons.util.StringUtil;
+import peoplesoft.logic.Logic;
 
 /**
  * The manager of the UI component.

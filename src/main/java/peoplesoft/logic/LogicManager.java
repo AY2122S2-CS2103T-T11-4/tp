@@ -5,6 +5,8 @@ import java.nio.file.Path;
 import java.util.logging.Logger;
 
 import javafx.collections.ObservableList;
+import peoplesoft.commons.core.GuiSettings;
+import peoplesoft.commons.core.LogsCenter;
 import peoplesoft.logic.commands.Command;
 import peoplesoft.logic.commands.CommandResult;
 import peoplesoft.logic.commands.exceptions.CommandException;
@@ -12,8 +14,6 @@ import peoplesoft.logic.parser.AddressBookParser;
 import peoplesoft.logic.parser.exceptions.ParseException;
 import peoplesoft.model.Model;
 import peoplesoft.model.ReadOnlyAddressBook;
-import peoplesoft.commons.core.GuiSettings;
-import peoplesoft.commons.core.LogsCenter;
 import peoplesoft.model.person.Person;
 import peoplesoft.storage.Storage;
 

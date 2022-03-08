@@ -2,8 +2,8 @@ package peoplesoft.logic.commands;
 
 import static java.util.Objects.requireNonNull;
 
-import peoplesoft.model.Model;
 import peoplesoft.commons.core.Messages;
+import peoplesoft.model.Model;
 import peoplesoft.model.person.NameContainsKeywordsPredicate;
 
 /**

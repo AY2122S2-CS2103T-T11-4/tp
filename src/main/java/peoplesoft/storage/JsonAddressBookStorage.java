@@ -7,12 +7,12 @@ import java.nio.file.Path;
 import java.util.Optional;
 import java.util.logging.Logger;
 
-import peoplesoft.model.ReadOnlyAddressBook;
 import peoplesoft.commons.core.LogsCenter;
 import peoplesoft.commons.exceptions.DataConversionException;
 import peoplesoft.commons.exceptions.IllegalValueException;
 import peoplesoft.commons.util.FileUtil;
 import peoplesoft.commons.util.JsonUtil;
+import peoplesoft.model.ReadOnlyAddressBook;
 
 /**
  * A class to access AddressBook data stored as a json file on the hard disk.

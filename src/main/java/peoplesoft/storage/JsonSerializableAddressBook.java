@@ -8,9 +8,9 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
 
+import peoplesoft.commons.exceptions.IllegalValueException;
 import peoplesoft.model.AddressBook;
 import peoplesoft.model.ReadOnlyAddressBook;
-import peoplesoft.commons.exceptions.IllegalValueException;
 import peoplesoft.model.person.Person;
 
 /**

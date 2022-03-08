@@ -13,17 +13,17 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
-import peoplesoft.logic.commands.exceptions.CommandException;
-import peoplesoft.model.Model;
-import peoplesoft.model.tag.Tag;
 import peoplesoft.commons.core.Messages;
 import peoplesoft.commons.core.index.Index;
 import peoplesoft.commons.util.CollectionUtil;
+import peoplesoft.logic.commands.exceptions.CommandException;
+import peoplesoft.model.Model;
 import peoplesoft.model.person.Address;
 import peoplesoft.model.person.Email;
 import peoplesoft.model.person.Name;
 import peoplesoft.model.person.Person;
 import peoplesoft.model.person.Phone;
+import peoplesoft.model.tag.Tag;
 
 /**
  * Edits the details of an existing person in the address book.
