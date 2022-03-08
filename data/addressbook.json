@@ -4,7 +4,7 @@
     "phone" : "99338558",
     "email" : "nicole@stffhub.org",
     "address" : "1 Tech Drive, S138572",
-    "tagged" : [ "Intern", "Aircon" ]
+    "tagged" : [ "Intern", "Student", "Aircon" ]
   }, {
     "name" : "Kavya Singh",
     "phone" : "96736637",
@@ -28,7 +28,6 @@
     "phone" : "80445044",
     "email" : "arjun@stffhub.org",
     "address" : "50 Collyer Quay, S049321",
-    "tagged" : [ "Contract", "Aircon" ]
+    "tagged" : [ "Plumbing", "Contract" ]
   } ]
 }
-
