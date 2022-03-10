@@ -1,33 +1,45 @@
 {
   "persons" : [ {
-    "name" : "Nicole Tan",
-    "phone" : "99338558",
-    "email" : "nicole@stffhub.org",
-    "address" : "1 Tech Drive, S138572",
-    "tagged" : [ "Intern", "Aircon" ]
+    "name" : "Alex Yeoh",
+    "phone" : "87438807",
+    "email" : "alexyeoh@example.com",
+    "address" : "Blk 30 Geylang Street 29, #06-40",
+    "remark" : "",
+    "tagged" : [ "friends" ]
   }, {
-    "name" : "Kavya Singh",
-    "phone" : "96736637",
-    "email" : "kavya@stffhub.org",
-    "address" : "2 Orchard Turn, S238801",
-    "tagged" : [ "Senior", "Electrician" ]
+    "name" : "Bernice Yu",
+    "phone" : "99272758",
+    "email" : "berniceyu@example.com",
+    "address" : "Blk 30 Lorong 3 Serangoon Gardens, #07-18",
+    "remark" : "",
+    "tagged" : [ "colleagues", "friends" ]
   }, {
-    "name" : "Ethan Lee",
+    "name" : "Charlotte Oliveiro",
+    "phone" : "93210283",
+    "email" : "charlotte@example.com",
+    "address" : "Blk 11 Ang Mo Kio Street 74, #11-04",
+    "remark" : "",
+    "tagged" : [ "neighbours" ]
+  }, {
+    "name" : "David Li",
     "phone" : "91031282",
-    "email" : "ethan@stffhub.org",
-    "address" : "10 Anson Road, S079903",
-    "tagged" : [ "Appliances" ]
+    "email" : "lidavid@example.com",
+    "address" : "Blk 436 Serangoon Gardens Street 26, #16-43",
+    "remark" : "",
+    "tagged" : [ "family" ]
   }, {
     "name" : "Irfan Ibrahim",
     "phone" : "92492021",
     "email" : "irfan@example.com",
     "address" : "Blk 47 Tampines Street 20, #17-35",
-    "tagged" : [ "Painting" ]
+    "remark" : "",
+    "tagged" : [ "classmates" ]
   }, {
-    "name" : "Arjun Khatau",
-    "phone" : "80445044",
-    "email" : "arjun@stffhub.org",
-    "address" : "50 Collyer Quay, S049321",
-    "tagged" : [ "Contract", "Aircon" ]
+    "name" : "Roy Balakrishnan",
+    "phone" : "92624417",
+    "email" : "royb@example.com",
+    "address" : "Blk 45 Aljunied Street 85, #11-31",
+    "remark" : "",
+    "tagged" : [ "colleagues" ]
   } ]
 }
