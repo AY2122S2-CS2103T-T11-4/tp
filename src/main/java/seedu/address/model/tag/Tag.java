@@ -1,18 +1,15 @@
 package seedu.address.model.tag;
 
-import static java.util.Objects.requireNonNull;
-import static seedu.address.commons.util.AppUtil.checkArgument;
+import seedu.address.model.Attribute;
 
 /**
  * Represents a Tag in the address book.
  * Guarantees: immutable; name is valid as declared in {@link #isValidTagName(String)}
  */
-public class Tag {
+public class Tag extends Attribute<String> {
 
     public static final String MESSAGE_CONSTRAINTS = "Tags names should be alphanumeric";
     public static final String VALIDATION_REGEX = "\\p{Alnum}+";
-
-    public final String tagName;
 
     /**
      * Constructs a {@code Tag}.
@@ -20,9 +17,7 @@ public class Tag {
      * @param tagName A valid tag name.
      */
     public Tag(String tagName) {
-        requireNonNull(tagName);
-        checkArgument(isValidTagName(tagName), MESSAGE_CONSTRAINTS);
-        this.tagName = tagName;
+        super(tagName);
     }
 
     /**
@@ -33,22 +28,20 @@ public class Tag {
     }
 
     @Override
-    public boolean equals(Object other) {
-        return other == this // short circuit if same object
-                || (other instanceof Tag // instanceof handles nulls
-                && tagName.equals(((Tag) other).tagName)); // state check
+    protected String getMessageConstraints() {
+        return MESSAGE_CONSTRAINTS;
     }
 
     @Override
-    public int hashCode() {
-        return tagName.hashCode();
+    public boolean isValid(String value) {
+        return isValidTagName(value);
     }
 
     /**
      * Format state as text for viewing.
      */
+    @Override
     public String toString() {
-        return '[' + tagName + ']';
+        return '[' + value + ']';
     }
-
 }

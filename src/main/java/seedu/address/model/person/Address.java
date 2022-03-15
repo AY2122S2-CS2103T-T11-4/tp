@@ -1,13 +1,12 @@
 package seedu.address.model.person;
 
-import static java.util.Objects.requireNonNull;
-import static seedu.address.commons.util.AppUtil.checkArgument;
+import seedu.address.model.Attribute;
 
 /**
  * Represents a Person's address in the address book.
  * Guarantees: immutable; is valid as declared in {@link #isValidAddress(String)}
  */
-public class Address {
+public class Address extends Attribute<String> {
 
     public static final String MESSAGE_CONSTRAINTS = "Addresses can take any values, and it should not be blank";
 
@@ -17,17 +16,13 @@ public class Address {
      */
     public static final String VALIDATION_REGEX = "[^\\s].*";
 
-    public final String value;
-
     /**
      * Constructs an {@code Address}.
      *
      * @param address A valid address.
      */
     public Address(String address) {
-        requireNonNull(address);
-        checkArgument(isValidAddress(address), MESSAGE_CONSTRAINTS);
-        value = address;
+        super(address);
     }
 
     /**
@@ -38,20 +33,12 @@ public class Address {
     }
 
     @Override
-    public String toString() {
-        return value;
+    protected String getMessageConstraints() {
+        return MESSAGE_CONSTRAINTS;
     }
 
     @Override
-    public boolean equals(Object other) {
-        return other == this // short circuit if same object
-                || (other instanceof Address // instanceof handles nulls
-                && value.equals(((Address) other).value)); // state check
+    public boolean isValid(String value) {
+        return isValidAddress(value);
     }
-
-    @Override
-    public int hashCode() {
-        return value.hashCode();
-    }
-
 }
